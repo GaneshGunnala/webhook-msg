@@ -11,15 +11,13 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(morgan('dev'))
 
-//evi controllers ra mana files ni refer cheyali eviti tho 
+
 const index = require('./api/index.js')
 const login_as_doctor = require('./api/login_as_doctor.js')
 const doctorpage = require('./api/doctorpage.js')
 const logout = require('./api/logout.js')
-//evi mount points ra , mana server ki a req hit aiynapudu aah req ni m cheyali ani chpthad evi
-// app.use('/', index, (req, res, next) => {
-//     console.log("This is for home page")
-// })
+
+
 
 app.use('/login_as_doctor', login_as_doctor, (req, res, next) => {
     console.log("This is for login_as_doctor.js")
