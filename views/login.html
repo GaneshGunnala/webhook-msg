@@ -1,26 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-        <title>Doctor Login</title>
-</head>
-<body>
-        <p>Hey there Login as doc</p>
-        <table border="1">
-        	<form method="post" action="/doctorpage">
-        		<tr>
-        			<td>Username:</td>
-        			<td><input type="text" name="uname"></td>
-        			
-        		</tr>
-        		<tr>
-        			<td>DocID(Pwd):</td>
-        			<td><input type="password" name="docid"></td>
-        		</tr>
-        		<tr>
-        			<td><input type="submit" name="submit"></td>
-        		</tr>
-        	</form>
-        </table>
-</body>
-</html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <a class="navbar-brand" href="#">Call Doctors</a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login_as_doctor">Login</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
 
+    <form action="/doctorpage" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="uname"
+          name="uname"
+          aria-describedby="emailHelp"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >We'll never share your email with anyone else.</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="docid" name="docid" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" name="submit">
+        Submit
+      </button>
+    </form>
+  </body>
+</html>

@@ -1,14 +1,14 @@
 {
-	"doctors":
-	[{
-			"Docname":"rahul",
-			"docid":"12345678",
-			"status":"Unavailable"
-		},
-		{
-			"Docname":"eshwar",
-			"docid":"12345678",
-			"status":"Unavailable"
-	}]
-
+  "doctors": [
+    {
+      "Docname": "rahul",
+      "docid": "12345678",
+      "status": "Unavailable"
+    },
+    {
+      "Docname": "eshwar",
+      "docid": "12345678",
+      "status": "Unavailable"
+    }
+  ]
 }
